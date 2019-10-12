@@ -1,0 +1,168 @@
+@media (min-width: 768px) {
+
+    /* show 3 items */
+	#carsl .carousel-inner .active,
+    #carsl .carousel-inner .active + .carousel-item,
+    #carsl .carousel-inner .active + .carousel-item + .carousel-item {
+        display: block;
+    }
+    
+    #carsl .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+    #carsl .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
+    #carsl .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
+        transition: none;
+    }
+    
+    #carsl .carousel-inner .carousel-item-next,
+    #carsl .carousel-inner .carousel-item-prev {
+      position: relative;
+      transform: translate3d(0, 0, 0);
+	  opacity:1 !important;
+    }
+	
+	
+    
+   #carsl .carousel-inner .active.carousel-item + #carsl .carousel-item + #carsl .carousel-item + #carsl .carousel-item + #carsl .carousel-item {
+        position: absolute;
+        top: 0;
+        right: -33.33%;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+    
+    /* left or forward direction */
+   #carsl .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+   #carsl .carousel-item-next.carousel-item-left + .carousel-item,
+    #carsl .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+    #carsl .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    
+    /* farthest right hidden item must be abso position for animations 
+    #carsl .carousel-inner .carousel-item-prev.carousel-item-right {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    } */
+    
+    /* right or prev direction */
+    #carsl .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+    #carsl .carousel-item-prev.carousel-item-right + .carousel-item,
+    #carsl .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+    #carsl .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(50%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+	#carsl #myCarousel
+	{
+		
+	}
+	#carsl .panel-thumbnail img
+	{
+		position:absolute;
+		width:150px;
+		height:150px;
+		margin:0px;
+		padding:0px;
+	}
+	#carsl .panel-thumbnail h3,#carsl h4
+	{
+		position:relative;
+		top:160px;
+		color:#000;
+		text-align:center;
+		
+		font-size:16px;
+	}
+	#carsl .panel-thumbnail h3 a,#carsl .panel-thumbnail h4 a
+	{
+	 color:#000;
+	 text-decoration:none;
+	}
+	#carsl .carousel-item 
+	{
+		border:1px solid #green;
+		height:250px;
+	}
+	#carsl .panel-thumbnail img
+	{
+		margin-left:20px;
+		margin-right:20px;
+		}
+
+}
+
+
+ /* Bootstrap Lightbox using Modal */
+
+#profile-grid { overflow: auto; white-space: normal; } 
+#profile-grid .profile { padding-bottom: 40px; }
+#profile-grid .panel { padding: 0 }
+#profile-grid .panel-body { padding: 15px }
+#profile-grid .profile-name { font-weight: bold; }
+#profile-grid .thumbnail {margin-bottom:6px;}
+#profile-grid .panel-thumbnail { overflow: hidden; }
+#profile-grid .img-rounded { border-radius: 4px 4px 0 0;}
+
+.blog1{
+	position:relative;
+}
+
+#carsl .carousel-control-prev,#carsl .carousel-control-next{
+	margin-top:-4% !important;
+	background-color:#2626a6;
+	padding:3px;
+	height:30px !important;
+	width:30px !important;
+	color:#ffc107 !important;
+}
+#carsl .carousel-control-prev{
+	left:94% !important;
+}
+
+#carsl .carousel-inner .carousel-item-prev.carousel-item-right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+}
+#carsl{
+	background-color:#fff !important;
+}
+#carsl .panel h3 a{
+	text-transform:uppercase;
+	
+}
+.carouselprevicon:after {
+  content: '<';
+  color: #fff !important;
+  font-size:20px;
+  font-weight:bold;
+}
+.carouselprevicon:hover::after{
+  content: '<';
+  color:#ffc107 !important;
+  
+}
+.carouselnexticon:after {
+  content: '>';
+  color: #fff !important;
+  font-size:20px;
+  font-weight:bold;
+}
+.carouselnexticon:hover::after{
+  content: '>';
+  color:#ffc107 !important;
+  
+}
